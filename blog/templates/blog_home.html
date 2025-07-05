@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Our Blog
+    </h1>
+    {% for post in posts %}
+    <div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <small> Published on: {{ post.published_at }} </small>
+
+    {% empty %}
+    <p>
+        No blog posts yet.
+    </p>
+    {% endfor %}
+    </div>
+    
+</body>
+</html>

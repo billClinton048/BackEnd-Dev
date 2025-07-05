@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Users
 from .forms import RegistrationForm
 
 # My Views 
@@ -17,3 +18,6 @@ def register(request):
 def success(request):
     return render(request, 'success.html')
 
+def View_users(request):
+    users = Users.objects.all()
+    return render(request, 'view_users.html', {'users': users})
