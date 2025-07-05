@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>users</title>
-</head>
-<body>
-    <h1>Registered Users</h1>
+{% extends 'base.html' %}
+
+
+
+{% block title %}Blog Home{% endblock %}
+{% block content %}
+  <h1>Registered Users</h1>
     <ul>
         {% for user in users %}
         <li> {{ user.username|capfirst }} - {{ user.email }} </li>
@@ -15,7 +13,5 @@
         {% endfor %}
     </ul>
 
-    <a href="/">Back to Home </a>
-    
-</body>
-</html>
+    <a href="/">Back to Home </a>l>
+{% endblock %}

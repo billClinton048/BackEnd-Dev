@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} title {% endblock %}</title>
+</head>
+<body>
+    <di class="layout">
+
+    
+    <aside class="sidebar">
+    <h2>NeoGen</h2>
+    <nav>
+      <ul>
+        <li><a href="/">🏠 Home</a></li>
+        <li><a href="/accounts/dashboard/">📊 Dashboard</a></li>
+        <li><a href="/accounts/users/">👥 Users</a></li>
+        <li><a href="/blog/">📝 Blog</a></li>
+        <li><a href="/blog/create/">➕ Create Blog</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+    <main class="main-content">
+        {% block content %}
+    {% endblock%}
+
+    </main>
+   
+    </div>
+</body>
+</html>
