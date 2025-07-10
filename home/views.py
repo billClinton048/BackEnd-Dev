@@ -9,6 +9,6 @@ def index(response, id):
 
 
 def home(response):
-    return render(response, "home/home.html", {"name": "testin"})
+    return render(response, "home/home.html", {"name": "home"})
 
     

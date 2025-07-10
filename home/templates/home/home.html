@@ -1,23 +1,41 @@
- {% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/home_style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <nav class="nav">
+        <ul class="links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li class="login"><a href="/">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="herosection">
+        <div class="content">
+            <h3> DESIGN*DEVELOP*BRAND</h3>
+            <h1>CREATIVE & EXPERIENCED </h1>
+            <P>WE ARE ONE OF THE BEST TOP CREATIVE DESIGN AGENCIES</P>
+            <div>
+                <button>LIKE $ SHARE</button>
+                <button>SUBSCRIBE</button>
+            </div>
+        
+        </div>
 
 
- {% block title %}
- dashboad
-
- {% endblock%}
-
-
-
- {% block content %}
- <h1>
-        Hello welcome to my Agile App
-    </h1>
-    <h2>
-        Will be using this to keep track of my Projects 
-    </h2>
-    <p>
-        {{ name }}
- </p>
-
-
- {% endblock %}
+    </section>
+</main>
+    
+</body>
+</html>
